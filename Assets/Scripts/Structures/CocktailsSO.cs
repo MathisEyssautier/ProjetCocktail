@@ -9,16 +9,15 @@ public class CocktailsSO : ScriptableObject
     public Sprite artwork;
     public List<Ingredient> ingredients;
     public List<Garniture> Garnish;
-    public List<Methodes> Methode;
     public GlassType Glass;
     public IceType Ice;
+    public MethodType methode;
 }
 
 
 [System.Serializable]
 public class Garniture
 {
-    public int Qtt;
     public GarnitureNature garnitureNature;
 }
 
@@ -29,26 +28,30 @@ public class Ingredient
     public Nature IngredientsNature;
 }
 
-[System.Serializable]
-public class Methodes
-{
-    public MethodType Method;
-}
 
 [System.Serializable]
 public enum Nature
 {
-    rum,
+    LightRum,
+    DarkRum,
     vodka,
     gin,
     tequila,
     tripleSec,
+    prosecco,
+    aperol,
     orangeJuice,
-    cranjuice,
+    GrapefruitJuice,
+    cranJuice,
+    lemonJuice,
+    limeJuice,
     tonic,
     espresso,
     coffeeLiqueur,
-    sugarSyrup
+    sugarSyrup,
+    cremeDeMure,
+    Sprite,
+    SodaWater
 }
 
 [System.Serializable]
@@ -56,7 +59,11 @@ public enum GarnitureNature
 {
     CoffeeBeans,
     LimeWedge,
-    LemonWedge
+    LemonWedge,
+    LemonZest,
+    GrapefruitSlice,
+    OrangeSlice,
+    SaltRim
 }
 
 [System.Serializable]
@@ -64,7 +71,10 @@ public enum GlassType
 {
    Rocks,
    ChilledMartini,
-   Highball
+   Highball,
+   ChampagneFlute,
+   WineGlass,
+   Shooter
 }
 
 [System.Serializable]
