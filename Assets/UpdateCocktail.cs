@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class UpdateCocktail : MonoBehaviour
-{ 
-    private CocktailsSO pickedSO;
+{
+    public CocktailsSO pickedSO;
     [SerializeField] private Text titleCocktail;
     [SerializeField] private Image imgCocktail;
     string[] listCocktails = new string[] { "AperolSpritz", "Daiquiri", "EspressoMartini", "Kamikaze", "Margarita", "Paloma", "WhiteLady" };
@@ -18,9 +18,14 @@ public class UpdateCocktail : MonoBehaviour
     {
         int rand = Random.Range(0, listCocktails.Length);
         Debug.Log("random :" + rand);
-        pickedSO = Resources.Load("Cocktails/" + listCocktails[rand].ToString()) as CocktailsSO;  
+        pickedSO = Resources.Load("Cocktails/" + listCocktails[rand].ToString()) as CocktailsSO;
         titleCocktail.text = pickedSO.nameCocktail;
         imgCocktail.sprite = pickedSO.artwork;
-        
+
     }
+
+    /*public void Click()
+    {
+      Debug.Log( );
+    }*/
 }
