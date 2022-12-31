@@ -4,13 +4,27 @@ using UnityEngine;
 
 public class ValidateButton : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //public UpdateCocktail updateCocktail;
+    //[SerializeField] GameObject canvas;
+
     void Start()
     {
 
     }
 
-    // Update is called once per frame
+    //public void showRes()
+    //{
+    //    updateCocktail = canvas.GetComponent<UpdateCocktail>();
+    //    if (updateCocktail.win == 0)
+    //    {
+    //        Debug.Log("You have failed.");
+    //    }
+    //    if (updateCocktail.win == 1)
+    //    {
+    //        Debug.Log("You have won.");
+    //    }
+    //}
+
     void Update()
     {
 

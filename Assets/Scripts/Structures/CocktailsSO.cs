@@ -34,22 +34,22 @@ public enum Nature
 {
     LightRum,
     DarkRum,
-    vodka,
-    gin,
-    tequila,
-    tripleSec,
-    prosecco,
-    aperol,
-    orangeJuice,
+    Vodka,
+    Gin,
+    Tequila,
+    TripleSec,
+    Prosecco,
+    Aperol,
+    OrangeJuice,
     GrapefruitJuice,
-    cranJuice,
-    lemonJuice,
-    limeJuice,
-    tonic,
-    espresso,
-    coffeeLiqueur,
-    sugarSyrup,
-    cremeDeMure,
+    CranJuice,
+    LemonJuice,
+    LimeJuice,
+    Tonic,
+    Espresso,
+    CoffeeLiqueur,
+    SugarSyrup,
+    CremeDeMure,
     Sprite,
     SodaWater
 }
@@ -63,7 +63,8 @@ public enum GarnitureNature
     LemonZest,
     GrapefruitSlice,
     OrangeSlice,
-    SaltRim
+    SaltRim,
+    None
 }
 
 [System.Serializable]
