@@ -5,18 +5,6 @@ using UnityEngine.UI;
 
 public class CManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public Dropdown DropGlass;
     public Dropdown DropIce;
@@ -37,9 +25,29 @@ public class CManager : MonoBehaviour
     public Slider SlidSodaWater;
     public CocktailsSO pickedSO;
     public int win;
+
+    public GameObject chartoanim;
+    Animator animator;
+    public GameObject cam;
+    Animator animCam;
+
+    public GameObject pannelDisplay;
+    public GameObject textRate;
+    public GameObject textReussi;
+
     [SerializeField] private Text titleCocktail;
     [SerializeField] private Image imgCocktail;
     string[] listCocktails = new string[] { "AperolSpritz", "Daiquiri", "EspressoMartini", "Kamikaze", "Margarita", "Paloma", "WhiteLady" };
+
+    // Start is called before the first frame update
+
+    void Start()
+    {
+        animator = chartoanim.GetComponent<Animator>();
+        animCam = cam.GetComponent<Animator>();
+    }
+
+    
 
     public void randCocktail()
     {
@@ -139,10 +147,18 @@ public class CManager : MonoBehaviour
         }
         if (win == 0)
         {
+            animator.SetBool("NoLikes", true);
+            animCam.SetBool("Zoom", true);
+            pannelDisplay.SetActive(false);
+            textRate.SetActive(true);
             Debug.Log("You have failed");
         }
         else
         {
+            animator.SetBool("Likes", true);
+            animCam.SetBool("Zoom", true);
+            pannelDisplay.SetActive(false);
+            textReussi.SetActive(true);
             Debug.Log("You have succeeded");
         }
     }

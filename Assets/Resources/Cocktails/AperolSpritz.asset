@@ -31,15 +31,15 @@ MonoBehaviour:
     IngredientsNature: 9
   - Quantity: 0
     IngredientsNature: 11
-  - Quantity: 20
+  - Quantity: 0
     IngredientsNature: 12
-  - Quantity: 20
+  - Quantity: 0
     IngredientsNature: 14
   - Quantity: 0
     IngredientsNature: 15
   - Quantity: 0
     IngredientsNature: 16
-  - Quantity: 0
+  - Quantity: 20
     IngredientsNature: 19
   Garnish:
   - garnitureNature: 5
