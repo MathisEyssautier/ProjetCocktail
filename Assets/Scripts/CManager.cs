@@ -23,6 +23,7 @@ public class CManager : MonoBehaviour
     public Slider SlidCoffeeLiqueur;
     public Slider SlidSugarSyrup;
     public Slider SlidSodaWater;
+    public Slider SlidGin;
     public CocktailsSO pickedSO;
     public int win;
 
@@ -37,6 +38,17 @@ public class CManager : MonoBehaviour
 
     [SerializeField] private Text titleCocktail;
     [SerializeField] private Image imgCocktail;
+
+    public GameObject textDai;
+    public GameObject textKam;
+    public GameObject textEsp;
+    public GameObject textPal;
+    public GameObject textWhi;
+    public GameObject textSpr;
+    public GameObject textMar;
+
+    public GameObject restartButton;
+
     string[] listCocktails = new string[] { "AperolSpritz", "Daiquiri", "EspressoMartini", "Kamikaze", "Margarita", "Paloma", "WhiteLady" };
 
     // Start is called before the first frame update
@@ -57,6 +69,21 @@ public class CManager : MonoBehaviour
         titleCocktail.text = pickedSO.nameCocktail;
         imgCocktail.sprite = pickedSO.artwork;
 
+
+        if (rand == 0)
+            textSpr.SetActive(true);
+        if (rand == 1)
+            textDai.SetActive(true);
+        if (rand == 2)
+            textEsp.SetActive(true);
+        if (rand == 3)
+            textKam.SetActive(true);
+        if (rand == 4)
+            textMar.SetActive(true);
+        if (rand == 5)
+            textPal.SetActive(true);
+        if (rand == 6)
+            textWhi.SetActive(true);
     }
 
     public void compCocktail()
@@ -137,6 +164,10 @@ public class CManager : MonoBehaviour
         {
             win = 0;
         }
+        else if (pickedSO.ingredients[13].Quantity != SlidGin.value)
+        {
+            win = 0;
+        }
         else if (pickedSO.Garnish[0].garnitureNature.ToString() != DropGar.options[DropGar.value].text)
         {
             win = 0;
@@ -152,6 +183,7 @@ public class CManager : MonoBehaviour
             pannelDisplay.SetActive(false);
             textRate.SetActive(true);
             Debug.Log("You have failed");
+            restartButton.SetActive(true);
         }
         else
         {
@@ -160,6 +192,7 @@ public class CManager : MonoBehaviour
             pannelDisplay.SetActive(false);
             textReussi.SetActive(true);
             Debug.Log("You have succeeded");
+            restartButton.SetActive(true);
         }
     }
 

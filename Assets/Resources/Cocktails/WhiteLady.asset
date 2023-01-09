@@ -17,7 +17,7 @@ MonoBehaviour:
   ingredients:
   - Quantity: 0
     IngredientsNature: 0
-  - Quantity: 40
+  - Quantity: 0
     IngredientsNature: 2
   - Quantity: 0
     IngredientsNature: 4
@@ -41,6 +41,8 @@ MonoBehaviour:
     IngredientsNature: 16
   - Quantity: 0
     IngredientsNature: 19
+  - Quantity: 40
+    IngredientsNature: 3
   Garnish:
   - garnitureNature: 3
   Glass: 1

@@ -29,20 +29,22 @@ MonoBehaviour:
     IngredientsNature: 7
   - Quantity: 60
     IngredientsNature: 9
-  - Quantity: 100
+  - Quantity: 0
     IngredientsNature: 11
   - Quantity: 10
     IngredientsNature: 12
-  - Quantity: 100
+  - Quantity: 0
     IngredientsNature: 14
-  - Quantity: 100
+  - Quantity: 0
     IngredientsNature: 15
   - Quantity: 10
     IngredientsNature: 16
-  - Quantity: 100
+  - Quantity: 90
     IngredientsNature: 19
+  - Quantity: 0
+    IngredientsNature: 3
   Garnish:
-  - garnitureNature: 6
+  - garnitureNature: 4
   Glass: 2
   Ice: 1
   methode: 2
